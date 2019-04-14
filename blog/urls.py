@@ -22,4 +22,6 @@ urlpatterns = [
     # 这个255会在调用视图函数detail时被传递进去
     # 实际上就是detail(request, pk=255)
     url(r'^post/(?P<pk>[0-9]+)/$', views.detail, name='detail'),
+    url(r'^archives/(?P<year>[0-9]{4})/(?P<month>[0-9]{1,2})/$', views.archives, name='archives'),
+    url(r'^category/(?P<pk>[0-9]+)/$', views.category, name='category'),
 ]
